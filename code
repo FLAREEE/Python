@@ -1,0 +1,5 @@
+from PIL import Image
+
+file=r'1.jpg'
+pic=Image.open(file)
+pic.show()
