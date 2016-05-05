@@ -1,0 +1,13 @@
+import string,random
+
+def rd(num,length=7):
+    f=open('n.txt',w)
+    for i in range(num):
+        x=string.letters+string.digits
+        s=[random.choice(x)for i in range(length)]
+        f.write(''.join(s)+'\n')
+    f.close()
+
+if __name__=='__main__':
+    rd(20)
+    
