@@ -1,0 +1,2 @@
+# python_picture
+这是一个很简单的用python输出图片的代码
