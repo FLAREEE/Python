@@ -1,0 +1,14 @@
+from collections import OrderedDict
+
+a=OrderedDict([('a',1),('b',2),('c',3)])
+print a
+print a.keys()
+print a.values()
+
+#b=OrderedDict()
+#b['x']=1
+#b['y']=2
+#b['z']=3
+
+
+#两种写法等价
