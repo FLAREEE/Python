@@ -1,0 +1,8 @@
+from collections import deque
+
+a=deque(['x','y','z'])
+a.append('B')
+a.appendleft('A')
+a.pop()
+a.popleft()
+print a
