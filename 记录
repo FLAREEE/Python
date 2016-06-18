@@ -1,0 +1,158 @@
+#!/usr/bin/env python   第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
+# -*- coding:utf-8 -*-：按照UTF-8编码读取源代码
+\n:换行
+decorator:装饰器
+map()函数：接收一个函数和一个list  
+upper():字母大写
+lower():字母小写
+reduce():接收一个函数和一个list，函数必须接收两个值,例如：[1,2,3,4] 1+2=3 3+3=6 6+4=10
+sqrt():返回平方根
+strip():删除空白符（包括'\n', '\r', '\t', ' ')
+filter():接收一个函数和一个list,对元素进行判断,返回ture和false,过滤掉不符条件形成新list
+sorted():可对list进行排序,同时可进行比较,如果 x 应该排在 y 的前面,返回 -1,
+         如果 x 应该排在 y 的后面,返回 1,如果 x 和 y 相等,返回 0
+lambda:关键字lambda 表示匿名函数,只能有一个表达式，不写return，返回值就是该表达式的结果
+functools.partial:可以把一个参数多的函数转换成参数少的函数,把一个函数的某些参数给固定住（也就是设置默认值）,
+				  返回一个新的函数
+cmp:它的返回值只有三个,正数,0,负数.如果x < y ,返回负数；x == y, 返回0；x > y,返回正数
+	默认为从小到大(升序),-cmp为从大到小(降序)
+pow():返回 xy（x的y次方）的值
+try:作用是捕获错误，并在捕获到指定错误时执行 except 语句。
+type函数:可以得到一个对象的类型
+      例：>>>lst = [1, 2, 3]
+          >>>type(lst)
+          <type 'list'>
+		  
+isinstance函数:判断一个对象是否是一个已知的类型,其第一个参数为对象,第二个为类型名或类型名的一个列表
+            例:>>> isinstance(1, int)
+                   True
+               >>> isinstance(1.0, float)
+                   True
+				   
+__name__:可以拿到函数的名字
+__future__:在老版本中实现新版本中的功能,必须写在头部
+__init__() 方法的第一个参数必须是 self（也可以用别的名字，但建议使用习惯用法）,
+           后续参数则可以自由指定,和定义函数没有任何区别
+super().__init__:初始化父类
+__XXX:双__无法被外部访问,可定义一个实例方法
+setattr(self,x,y):表示你可以通过该方法，给对象添加或者修改指定的属性,
+                  方法接受3个参数:setattr(对象，属性，属性的值),等价于self.x=y
+kw.iteritems():历遍字典kw的所有key和value，分别匹配的是定义的key,value
+__str__和__repr__:__str__()用于显示给用户，而__repr__()用于显示给编译器
+__cmp__:对一组类的实例进行排序
+Rational():表示有理数
+raise语句:引发异常
+__slots__:限制当前类所能拥有的属性,定义的属性仅对当前类起作用，对继承的子类是不起作用的
+/ 返回结果是浮点数  // 返回结果是整数
+%运算符就是用来格式化字符串的。在字符串内部,
+         %s 表示用字符串替换，%d 表示用整数替换,
+            有几个%?占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个%?，括号可以省略
+         %d	整数
+         %f	浮点数
+         %s	字符串
+         %x	十六进制整数
+#open(路径+文件名,读写模式)
+#读写模式:r只读,r+读写,w新建(会覆盖原有文件),a追加,b二进制文件.常用模式,如:'rb','wb','r+b'等等
+		read(size)方法,每次最多读取size个字节的内容
+		readline()可以每次读取一行内容
+		readlines()一次读取所有内容并按行返回list
+          读写模式的类型有：
+
+          rU 或 Ua 以读方式打开, 同时提供通用换行符支持 (PEP 278)
+          w     以写方式打开，
+          a     以追加模式打开 (从 EOF 开始, 必要时创建新文件)
+          r+     以读写模式打开
+          w+     以读写模式打开 (参见 w )
+          a+     以读写模式打开 (参见 a )
+          rb     以二进制读模式打开
+          wb     以二进制写模式打开 (参见 w )
+          ab     以二进制追加模式打开 (参见 a )
+          rb+    以二进制读写模式打开 (参见 r+ )
+          wb+    以二进制读写模式打开 (参见 w+ )
+          ab+    以二进制读写模式打开 (参见 a+ )
+图像的颜色转换可以使用 convert() 方法来实现,
+要读取一幅图像,并将其转换成灰度图像,只需要加上 convert('L')
+          xxx = Image.open('xxx.jpg').convert('L')
+pop():删除list末尾的元素,也可用于删除dict内的内容：x.pop('key')
+raw_input():读取用户的输入,读取的内容永远以字符串的形式返回
+int():整型
+*：在list或tuple前面加一个*号，把list或tuple的元素变成可变参数
+	*xx:可变参数    **xx:关键字参数
+	参数定义的顺序必须是：必选参数、默认参数、可变参数和关键字参数
+	*args是可变参数，args接收的是一个tuple；
+	**kw是关键字参数，kw接收的是一个dict。
+List用[]表示,Tuple用()表示
+set用([])表示,key不能重复,重复元素在set中自动被过滤
+	add(key)方法可以添加元素到set中
+	remove(key)方法可以删除元素
+dict用{}(加入数据时使用[]),dict的key必须是不可变对象
+	d.get():判断dict内的key是否存在
+replace():字符串中的 old（旧字符串） 替换成 new(新字符串)后生成的新字符串，
+		  如果指定第三个参数max，则替换不超过 max 次
+如果要迭代value，可以用for value in d.itervalues(),
+如果要同时迭代key和value，可以用for k, v in d.iteritems().
+from collections import Iterable:通过collections模块的Iterable类型判断对象是否是可迭代对象
+enumerate():可以把一个list变成索引-元素对
+			>>>for i, value in enumerate(['A', 'B', 'C']):
+			>>>		print i, value
+		0 A
+		1 B
+		2 C
+generator:只要把一个列表生成式的[]改成(),就创建了一个generator
+		  如果一个函数定义中包含yield关键字,那么这个函数就不再是一个普通函数,而是一个generator
+		  遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行
+__author__ =软件的作者名   __copyright__ =版权所有（C） 
+__:实例的变量名如果以__开头,就变成了一个私有变量（private）,只有内部可以访问,外部不能访问
+@property:负责把一个方法变成属性调用
+dir():获得当前模块的属性列表
+__getattr__:动态返回一个属性,只有在没有找到属性的情况下，才调用__getattr__
+__iter__:在类当中实现迭代
+callable:检查对象是否可调用
+__call__:可以直接对实例进行调用
+assert：assert n != 0, 'n is zero!' 意思是,表达式n != 0应该是True,否则,后面的代码就会出错
+        启动Python解释器时可以用-O参数来关闭assert
+codecs模块:读文件时自动转换编码
+os.environ:获取操作系统中定义的环境变量
+os.getenv():获取某个环境变量的值
+os.path.abspath():查看当前目录的路径
+os.path.join('/Users/michael', 'testdir'):把新目录的完整路径表示出来,两个路径合成一个
+os.path.split():把一个路径拆分为两部分
+os.path.splitext():直接获取文件扩展名
+os.mkdir('/Users/michael/testdir'):创建目录
+os.rmdir('/Users/michael/testdir'):删除目录
+os.rename('',''):对文件重命名
+os.getcwd():获取当前的路径
+os.getpid():得到当前进程ID
+pickle.dumps():把任意对象序列化成一个str
+pickle.dump():把对象序列化后写入一个file-like Object
+pickle.load():从一个file-like Object中直接反序列化出对象
+time.sleep():推迟调用线程的运行
+xx.terminate():强制中止
+mulitiprocessing:
+	在Unix/Linux下，可以使用fork()调用实现多进程
+	要实现跨平台的多进程，可以使用multiprocessing模块
+	进程间通信是通过Queue、Pipes等实现的
+global:全局变量
+Process:代表一个进程对象
+thread和threading:代表的是线程对象,thread是低级模块,threading是高级模块
+group():提取出子串,group(0)永远是原始字符串，group(1)、group(2)……表示第1、2、……个子串
+re.compile():把正则表达式语法转化成正则表达式对象
+re.match():尝试匹配正则表达式
+		"."	任意字符	 
+		"^"	字符串开始
+		"$"	字符串结尾
+		"*" 	0 个或多个字符(贪婪匹配)
+		"+"	1 个或多个字符（贪婪匹配）
+		"?"	0 个或多个字符（贪婪匹配）
+		*?,+?,??	以上三个取第一个匹配结果（非贪婪匹配）
+		{m,n}	对于前一个字符重复m到n次，{m}亦可
+		{m,n}?	对于前一个字符重复m到n次，并取尽可能少	
+		"\\"	特殊字符转义或者特殊序列	 
+		[]	表示一个字符集
+		"|"	或
+		\d:匹配一个数字，
+		\w:匹配一个字母或数字
+defaultdict:返回一个默认值
+OrderedDict：保持dict中Key的顺序
+Counter:计数器
+urllib2.urlopen():urllib2.urlopen可以接受一个Request对象或者url
